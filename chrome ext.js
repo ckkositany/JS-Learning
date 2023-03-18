@@ -51,7 +51,13 @@ let listItems=""
 for (let i=0; i<myLeads.length; i++){
 // lesson 20replacing  ulEl.innerHTML with the var listItems
 
-listItems += "<li><a href='#'>" + myLeads[i] + "</a></li>"
+//listItems += "<li><a target= '_blank' href='#'>" + myLeads[i] + "</a></li>" // we use target to make the link open in new tab
+// using template stringsto break down the the content in the listitems var. We use back tick to allow line break
+listItems += `<li>
+            <a target= '_blank' href='${myLeads[i] }'>
+                ${myLeads[i] }
+                </a>
+                </li>`
 console.log(listItems)
 
 
@@ -65,6 +71,7 @@ ulEL.append(li)
 //renedring the listItems using ulEl.innerHtml 
 ulEL.innerHTML=listItems
 }
+
 
 /*
 // rendering the leads inside the unorderd lists
@@ -82,6 +89,8 @@ function buy(){
 // you then set the var to the textContent
 // you then append(th var created)
 //lesson 23 adding the <a> tag attribute inside myLeads
+//lesson 25 learning to write templates strings
+
 
 
 
