@@ -57,7 +57,7 @@ listItems += `<li>
             <a target= '_blank' href='${myLeads[i] }'>
                 ${myLeads[i] }
                 </a>
-                </li>`
+                </li>`// using template strings helps to break the lines with no erros azn above
 console.log(listItems)
 
 
@@ -89,8 +89,17 @@ function buy(){
 // you then set the var to the textContent
 // you then append(th var created)
 //lesson 23 adding the <a> tag attribute inside myLeads
+/*
 //lesson 25 learning to write templates strings
-
+const recipient= "James"
+const name="Kositany"
+const email=`Hey 
+${recipient}! 
+How is it going? 
+cheers ${name}`
+console.log(email)
+*/
+//lesson 30 preparing the deployment
 
 
 
