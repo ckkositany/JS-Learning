@@ -100,6 +100,22 @@ cheers ${name}`
 console.log(email)
 */
 //lesson 30 preparing the deployment
+// Json = javascript object notation
+//download the zip file to deploy the extension succesfully from the tutor's tutorials at 5:50 hours of the video
+//learning the local storage to store our leads
+// creating the local storage
+//localStorage.setItem("myLeads","www.web3schools.co.ke")
+ let leads=localStorage.getItem("myLeads")
+localStorage.clear()
+console.log(leads)
+
+//storing arrays in the local storage
+let myLead=`["www.1TO1MOBILE.co.ke"]`
+myLead=JSON.parse(myLead)
+myLead.push("www.samaneventures.ac.ke")
+
+//JSON.stringify(myLead)
+console.log(myLead)
 
 
 
