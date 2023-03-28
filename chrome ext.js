@@ -20,6 +20,19 @@ const inputEl=document.getElementById("input-el")
 const ulEL=document.getElementById("ul-el")//grabbing the unorderd lists and storing it in a const var
 //lesson 14 rendering myLeads in the unorderd lists
 
+        let leadsFromLocalStorage=JSON.parse( localStorage.getItem("myLeads"))
+    console.log(leadsFromLocalStorage)
+
+
+        //Lesson 37 Thruthy and Falsy statements
+        // avoid losing the leads when the page is refreshed
+        if(leadsFromLocalStorage){
+            myLeads = leadsFromLocalStorage
+            renderLeads()
+
+        }
+
+
 inputBtn.addEventListener("click",function(){
     // lesson 10 push to the myLead array inside this function
     myLeads.push(inputEl.value)
@@ -28,14 +41,21 @@ inputBtn.addEventListener("click",function(){
     inputEl.value=""// clearing out the input field
 
     // lessson 11 push the value from the input field
-    renderLeads()
+
+        //getttings the leads from the local storage
+    
+
+
+        
 
      //creation of the local storage to store the leads
      localStorage.setItem("myLeads", JSON.stringify(myLeads))
      //lead=JSON.stringify(lead)
      console.log(localStorage.getItem("myLeads"))
-
+     renderLeads()
 })
+
+        
        
 /*
 // lesson 9 when to use let and const
@@ -66,7 +86,7 @@ listItems += `<li>
                 ${myLeads[i] }
                 </a>
                 </li>`// using template strings helps to break the lines with no erros azn above
-console.log(listItems)
+//console.log(listItems)
 
 
 /*
@@ -127,6 +147,18 @@ myLead.push("www.samaneventures.ac.ke")
 console.log(myLead)
 */
 
+/*
+    //Lesson 37 Thruthy and Falsy statements
+    // null, empty quotes i.e "" ,undefined ,NaN all evaluates to falsy in javascript
+    // consider the following consoles;
+        console.log(Boolean(""))//leads to a falsy statement(null)
+        console.log(Boolean("0"))//leads to a truthy statement
+        console.log(Boolean(100))//leads to a truthy statement
+        console.log(Boolean(null))//leads to a falsystatement
+        console.log(Boolean([0]))//leads to a truthy statement
+        console.log(Boolean(-o))//leads to a false statement
+
+   */      
 
 
 
