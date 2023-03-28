@@ -11,11 +11,11 @@ openBox.addEventListener("click" ,function(){
     console.log("I want to open the box")
 })
 */
-
+let myLeads=[]
 const inputBtn=document.getElementById("input-btn")
 //creating myLeads array and inputEl
 
-let myLeads=[]
+
 const inputEl=document.getElementById("input-el")
 const ulEL=document.getElementById("ul-el")//grabbing the unorderd lists and storing it in a const var
 //lesson 14 rendering myLeads in the unorderd lists
@@ -23,12 +23,20 @@ const ulEL=document.getElementById("ul-el")//grabbing the unorderd lists and sto
 inputBtn.addEventListener("click",function(){
     // lesson 10 push to the myLead array inside this function
     myLeads.push(inputEl.value)
-    console.log(myLeads)
+   // console.log(myLeads)
     console.log("you have clicked the save button")
     inputEl.value=""// clearing out the input field
+
     // lessson 11 push the value from the input field
     renderLeads()
+
+     //creation of the local storage to store the leads
+     localStorage.setItem("myLeads", JSON.stringify(myLeads))
+     //lead=JSON.stringify(lead)
+     console.log(localStorage.getItem("myLeads"))
+
 })
+       
 /*
 // lesson 9 when to use let and const
 const basePrice=520
@@ -102,6 +110,7 @@ console.log(email)
 //lesson 30 preparing the deployment
 // Json = javascript object notation
 //download the zip file to deploy the extension succesfully from the tutor's tutorials at 5:50 hours of the video
+/*
 //learning the local storage to store our leads
 // creating the local storage
 //localStorage.setItem("myLeads","www.web3schools.co.ke")
@@ -116,6 +125,7 @@ myLead.push("www.samaneventures.ac.ke")
 
 //JSON.stringify(myLead)
 console.log(myLead)
+*/
 
 
 
